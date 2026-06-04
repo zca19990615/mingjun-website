@@ -149,104 +149,136 @@ function HeroSky() {
 
 function CompanyVisual() {
   return (
-    <div className="relative min-h-[360px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-8 shadow-sm">
-      <div className="absolute inset-0 opacity-70">
-        <div className="absolute left-0 top-12 h-px w-full bg-sky-100" />
-        <div className="absolute left-0 top-28 h-px w-full bg-sky-100" />
-        <div className="absolute left-0 top-44 h-px w-full bg-sky-100" />
-        <div className="absolute left-12 top-0 h-full w-px bg-sky-100" />
-        <div className="absolute left-36 top-0 h-full w-px bg-sky-100" />
-        <div className="absolute right-24 top-0 h-full w-px bg-sky-100" />
-      </div>
-
-      <div className="relative z-10 flex h-full min-h-[300px] flex-col justify-between">
-        <div className="flex items-start justify-between gap-6">
-          <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">IoT System</div>
-            <div className="mt-4 h-1 w-20 bg-sky-700" />
-          </div>
-          <div className="rounded border border-sky-200 bg-white/70 px-4 py-2 text-sm font-medium text-sky-800">
-            Device · Data · Platform
-          </div>
+    <div className="relative min-h-[320px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-6 shadow-sm">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(14,116,144,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(14,116,144,0.08)_1px,transparent_1px)] bg-[size:72px_58px]" />
+      <div className="relative z-10 flex items-start justify-between gap-4">
+        <div>
+          <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">IoT Data Link</div>
+          <div className="mt-3 h-1 w-20 bg-sky-700" />
         </div>
-
-        <div className="relative mt-8 flex flex-1 items-center justify-center">
-          <div className="absolute left-0 top-1/2 h-px w-full bg-sky-300" />
-          <div className="absolute left-[18%] top-[38%] h-px w-[64%] -rotate-6 bg-sky-400/70" />
-          <div className="absolute left-[18%] top-[62%] h-px w-[64%] rotate-6 bg-sky-400/70" />
-          <div className="relative h-40 w-52 rounded border border-sky-300 bg-white/85 shadow-sm">
-            <div className="absolute left-5 right-5 top-5 h-3 rounded bg-sky-100" />
-            <div className="absolute left-5 top-12 h-16 w-16 rounded border border-sky-200 bg-sky-50" />
-            <div className="absolute right-5 top-12 space-y-3">
-              <div className="h-2 w-20 rounded bg-sky-200" />
-              <div className="h-2 w-16 rounded bg-sky-200" />
-              <div className="h-2 w-24 rounded bg-sky-200" />
-            </div>
-            <div className="absolute bottom-0 left-1/2 h-10 w-px bg-sky-300" />
-            <div className="absolute -bottom-2 left-[36%] h-2 w-16 rounded-t bg-sky-300" />
-          </div>
-
-          <div className="absolute left-4 top-10 h-5 w-5 rounded-full border-4 border-white bg-sky-600 shadow-sm" />
-          <div className="absolute bottom-12 left-14 h-4 w-4 rounded-full border-4 border-white bg-sky-500 shadow-sm" />
-          <div className="absolute right-10 top-14 h-5 w-5 rounded-full border-4 border-white bg-sky-700 shadow-sm" />
-          <div className="absolute bottom-8 right-20 h-4 w-4 rounded-full border-4 border-white bg-sky-500 shadow-sm" />
-        </div>
-
-        <div className="grid grid-cols-3 gap-3 text-xs font-medium text-sky-900">
-          <div className="border-t border-sky-300 pt-3">监测终端</div>
-          <div className="border-t border-sky-300 pt-3">数据接入</div>
-          <div className="border-t border-sky-300 pt-3">项目实施</div>
+        <div className="border border-sky-200 bg-white/75 px-4 py-2 text-sm font-medium text-sky-800">
+          Device · Platform · Service
         </div>
       </div>
+
+      <svg className="relative z-10 mt-3 h-[238px] w-full" viewBox="0 0 520 238" role="img" aria-label="智能设备、物联网平台与项目实施数据链路示意图">
+        <defs>
+          <linearGradient id="companyPanel" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#dff3ff" />
+          </linearGradient>
+        </defs>
+
+        <path d="M95 118 C150 78 190 78 240 112 S340 148 415 90" fill="none" stroke="#0284c7" strokeWidth="2" opacity="0.58" />
+        <path d="M95 152 C170 150 216 136 260 128 S350 108 425 132" fill="none" stroke="#38bdf8" strokeWidth="2" opacity="0.7" />
+        <path d="M154 126 H218" stroke="#0ea5e9" strokeWidth="2" strokeDasharray="7 7" />
+        <path d="M314 126 H372" stroke="#0ea5e9" strokeWidth="2" strokeDasharray="7 7" />
+
+        <rect x="34" y="82" width="96" height="124" rx="8" fill="url(#companyPanel)" stroke="#7dd3fc" />
+        <rect x="55" y="105" width="54" height="54" rx="5" fill="#f8fdff" stroke="#93c5fd" />
+        <circle cx="82" cy="132" r="15" fill="#e0f2fe" stroke="#0284c7" />
+        <path d="M66 176 H98 M70 188 H94" stroke="#0284c7" strokeWidth="3" strokeLinecap="round" />
+        <text x="82" y="222" textAnchor="middle" fill="#075985" fontSize="13" fontWeight="600">设备终端</text>
+
+        <rect x="188" y="42" width="154" height="130" rx="10" fill="#ffffff" stroke="#7dd3fc" />
+        <rect x="205" y="60" width="116" height="18" rx="4" fill="#e0f2fe" />
+        <path d="M212 128 L232 108 L253 116 L276 90 L312 104" fill="none" stroke="#0284c7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="211" y="145" width="32" height="8" rx="4" fill="#7dd3fc" />
+        <rect x="252" y="145" width="56" height="8" rx="4" fill="#bae6fd" />
+        <text x="265" y="194" textAnchor="middle" fill="#075985" fontSize="13" fontWeight="600">物联网平台</text>
+
+        <rect x="390" y="74" width="94" height="108" rx="8" fill="#f8fdff" stroke="#7dd3fc" />
+        <path d="M410 105 H465 M410 126 H452 M410 147 H470" stroke="#38bdf8" strokeWidth="8" strokeLinecap="round" />
+        <circle cx="404" cy="92" r="6" fill="#0284c7" />
+        <circle cx="424" cy="92" r="6" fill="#38bdf8" />
+        <circle cx="444" cy="92" r="6" fill="#7dd3fc" />
+        <text x="437" y="205" textAnchor="middle" fill="#075985" fontSize="13" fontWeight="600">项目实施</text>
+
+        <circle cx="154" cy="126" r="7" fill="#0284c7" stroke="#ffffff" strokeWidth="4" />
+        <circle cx="372" cy="126" r="7" fill="#0284c7" stroke="#ffffff" strokeWidth="4" />
+      </svg>
     </div>
   );
 }
 
 function CaseVisual({ variant }) {
-  const isFiber = variant === "fiber";
+  const titleMap = {
+    indoor: "Indoor Monitor",
+    air: "Campus Air",
+    site: "Site Monitor",
+    fiber: "Fiber Sensing",
+  };
 
   return (
-    <div className="relative min-h-[210px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-5">
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-10 h-px w-full bg-sky-100" />
-        <div className="absolute left-0 top-24 h-px w-full bg-sky-100" />
-        <div className="absolute left-0 bottom-12 h-px w-full bg-sky-100" />
-        <div className="absolute left-10 top-0 h-full w-px bg-sky-100" />
-        <div className="absolute right-12 top-0 h-full w-px bg-sky-100" />
+    <div className="relative min-h-[190px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-4">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(14,116,144,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(14,116,144,0.08)_1px,transparent_1px)] bg-[size:56px_44px]" />
+      <div className="relative z-10 mb-2 flex items-center justify-between">
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">{titleMap[variant]}</div>
+        <div className="h-1 w-14 bg-sky-700" />
       </div>
 
-      <div className="relative z-10 h-full min-h-[170px]">
-        <div className="absolute left-2 top-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
-          Field View
-        </div>
-
-        {isFiber ? (
-          <div className="absolute inset-x-4 top-20">
-            <div className="h-px w-full bg-sky-700" />
-            <div className="mt-8 h-px w-full bg-sky-500" />
-            <div className="absolute -top-7 left-[18%] h-14 w-14 rotate-45 border-l-2 border-t-2 border-sky-700" />
-            <div className="absolute -top-9 left-[48%] h-16 w-16 rotate-45 border-l-2 border-t-2 border-sky-600" />
-            <div className="absolute -top-6 right-[8%] h-12 w-12 rotate-45 border-l-2 border-t-2 border-sky-500" />
-          </div>
-        ) : (
-          <div className="absolute left-1/2 top-1/2 h-28 w-24 -translate-x-1/2 -translate-y-1/2 rounded border border-sky-300 bg-white/85 shadow-sm">
-            <div className="mx-auto mt-4 h-10 w-10 rounded-full border border-sky-300 bg-sky-50" />
-            <div className="mx-auto mt-4 h-2 w-14 rounded bg-sky-200" />
-            <div className="mx-auto mt-2 h-2 w-10 rounded bg-sky-200" />
-          </div>
+      <svg className="relative z-10 h-[154px] w-full" viewBox="0 0 360 154" role="img" aria-label={`${titleMap[variant]} 场景示意图`}>
+        {variant === "indoor" && (
+          <>
+            <path d="M32 120 V35 H210 V120" fill="none" stroke="#0284c7" strokeWidth="2" />
+            <path d="M32 35 L118 16 L210 35" fill="none" stroke="#38bdf8" strokeWidth="2" />
+            <rect x="58" y="76" width="42" height="52" fill="#f8fdff" stroke="#7dd3fc" />
+            <rect x="76" y="92" width="64" height="36" fill="#ffffff" stroke="#bae6fd" />
+            <rect x="158" y="57" width="58" height="82" rx="5" fill="#ffffff" stroke="#7dd3fc" />
+            <circle cx="187" cy="82" r="15" fill="#e0f2fe" stroke="#0284c7" />
+            <path d="M174 112 H203 M178 124 H198" stroke="#38bdf8" strokeWidth="6" strokeLinecap="round" />
+            <path d="M238 116 C252 84 268 100 281 74 S306 88 322 49" fill="none" stroke="#0284c7" strokeWidth="3" />
+            <path d="M238 132 C260 128 272 118 289 123 S314 116 330 104" fill="none" stroke="#38bdf8" strokeWidth="3" />
+            <text x="238" y="46" fill="#075985" fontSize="12" fontWeight="600">PM</text>
+            <text x="274" y="46" fill="#075985" fontSize="12" fontWeight="600">CO₂</text>
+            <text x="312" y="46" fill="#075985" fontSize="12" fontWeight="600">温湿度</text>
+          </>
         )}
 
-        <div className="absolute bottom-5 left-4 right-4 flex items-end justify-between">
-          <div className="h-10 w-8 border border-sky-300 bg-white/70" />
-          <div className="h-16 w-8 border border-sky-300 bg-white/70" />
-          <div className="h-8 w-8 border border-sky-300 bg-white/70" />
-          <div className="h-12 w-8 border border-sky-300 bg-white/70" />
-        </div>
+        {variant === "air" && (
+          <>
+            <path d="M26 124 H332" stroke="#0284c7" strokeWidth="2" />
+            <rect x="42" y="73" width="42" height="51" fill="#ffffff" stroke="#7dd3fc" />
+            <rect x="99" y="55" width="54" height="69" fill="#f8fdff" stroke="#7dd3fc" />
+            <rect x="171" y="80" width="44" height="44" fill="#ffffff" stroke="#7dd3fc" />
+            <path d="M236 124 V62 H246 V124 M228 62 H254 M237 52 H245" stroke="#0284c7" strokeWidth="3" />
+            <circle cx="241" cy="45" r="10" fill="#e0f2fe" stroke="#0284c7" />
+            <path d="M270 92 C287 78 300 82 315 68" fill="none" stroke="#38bdf8" strokeWidth="3" strokeLinecap="round" />
+            <path d="M46 64 L64 48 L82 64 M106 47 L126 30 L149 47 M174 72 L193 58 L213 72" fill="none" stroke="#93c5fd" strokeWidth="2" />
+            <path d="M42 92 H84 M99 76 H153 M171 98 H215" stroke="#bae6fd" strokeWidth="4" />
+            <path d="M265 116 C280 103 296 109 310 96 S332 92 342 78" fill="none" stroke="#0284c7" strokeWidth="3" />
+          </>
+        )}
 
-        <div className="absolute right-5 top-10 h-3 w-3 rounded-full bg-sky-700" />
-        <div className="absolute left-6 bottom-20 h-2.5 w-2.5 rounded-full bg-sky-500" />
-        <div className="absolute right-16 bottom-24 h-2.5 w-2.5 rounded-full bg-sky-600" />
-      </div>
+        {variant === "site" && (
+          <>
+            <path d="M28 124 H334" stroke="#075985" strokeWidth="2" />
+            <path d="M52 124 V58 H64 V124 M42 58 H146 L64 26" fill="none" stroke="#0284c7" strokeWidth="3" strokeLinecap="round" />
+            <path d="M78 70 L132 70 L150 92" fill="none" stroke="#7dd3fc" strokeWidth="3" />
+            <rect x="161" y="71" width="60" height="53" fill="#f8fdff" stroke="#7dd3fc" />
+            <rect x="181" y="48" width="20" height="76" fill="#ffffff" stroke="#0284c7" />
+            <circle cx="191" cy="39" r="11" fill="#e0f2fe" stroke="#0284c7" />
+            <path d="M246 55 H324 M246 75 H304 M246 95 H332" stroke="#38bdf8" strokeWidth="5" strokeLinecap="round" opacity="0.85" />
+            <circle cx="254" cy="118" r="3" fill="#0284c7" />
+            <circle cx="278" cy="111" r="3" fill="#38bdf8" />
+            <circle cx="307" cy="119" r="3" fill="#0284c7" />
+            <path d="M250 137 C268 126 284 134 298 122 S322 118 338 104" fill="none" stroke="#0284c7" strokeWidth="3" />
+          </>
+        )}
+
+        {variant === "fiber" && (
+          <>
+            <path d="M24 118 C72 88 98 128 132 93 S198 85 232 113 S292 120 332 82" fill="none" stroke="#0284c7" strokeWidth="3" />
+            <path d="M26 132 H338" stroke="#075985" strokeWidth="2" />
+            <path d="M70 132 L103 92 L136 132 M208 132 L239 98 L272 132" fill="none" stroke="#38bdf8" strokeWidth="3" />
+            <path d="M156 132 V72 M156 72 L128 58 M156 72 L184 58 M156 72 L156 39" stroke="#0284c7" strokeWidth="3" strokeLinecap="round" />
+            <circle cx="156" cy="38" r="5" fill="#0284c7" />
+            <path d="M242 58 C256 43 276 43 290 58 S318 73 332 58" fill="none" stroke="#38bdf8" strokeWidth="3" />
+            <path d="M238 79 L248 66 L258 91 L270 55 L284 100 L296 68 L310 86" fill="none" stroke="#0284c7" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <text x="238" y="35" fill="#075985" fontSize="12" fontWeight="600">温度 / 应变 / 振动</text>
+          </>
+        )}
+      </svg>
     </div>
   );
 }
@@ -292,7 +324,7 @@ export default function MingjunTechHomepage() {
               智能设备定制 · 物联网系统研发 · 生产供货
             </div>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-950 md:text-6xl">
-              智能监测设备与物联网数据系统供应商
+              智能设备与物联网系统供应商
             </h1>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="#解决方案" className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-700 px-7 py-3 font-semibold text-white shadow-xl shadow-sky-200 transition hover:bg-sky-800">
