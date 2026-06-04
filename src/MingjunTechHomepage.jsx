@@ -69,36 +69,40 @@ const serviceSteps = [
 
 const cases = [
   {
+    visual: "indoor",
     label: "室内环境与健康研究",
-    title: "剑桥大学相关研究：室内环境与人类健康监测设备",
-    desc: "围绕室内环境与人类健康研究需求，交付环境监测终端及配套定制软件。设备支持 PM、CO₂、温湿度等参数采集，具备设备编号、批量管理、数据上报和后台查看功能，适用于大规模、多点位、长期监测项目。",
+    title: "剑桥大学相关研究平台：室内环境与人类健康监测设备项目",
+    desc: "围绕室内环境与人类健康研究需求，提供环境监测终端及配套定制软件，支持 PM、CO₂、温湿度等参数采集、设备编号、批量管理、数据上报和后台查看。",
     info: [
-      ["交付规模", "约 10,000 台"],
+      ["交付规模", "10,000 台"],
       ["监测参数", "PM / CO₂ / 温湿度"],
       ["交付内容", "环境监测终端、定制软件、数据接口与批量管理支持"],
     ],
   },
   {
+    visual: "air",
     label: "室外空气质量监测",
     title: "园区与校园空气质量监测设备项目",
     desc: "面向校园、园区和户外点位，提供室外空气质量监测终端。设备可根据现场需求配置颗粒物、温湿度、噪声、气象等模块，并支持多点位联网、远程数据查看和数据导出。",
     info: [
-      ["交付规模", "约 300–800 台"],
+      ["交付规模", "500 台"],
       ["应用场景", "校园、园区、户外监测点位"],
       ["交付内容", "监测终端、联网配置、后台管理与数据导出"],
     ],
   },
   {
+    visual: "site",
     label: "工程现场环境监测",
     title: "工程现场扬尘与环境监测项目",
     desc: "面向施工现场、工程项目和临时监测点，提供扬尘、噪声、温湿度等环境监测设备。系统支持现场设备安装、数据联网、后台查看和后期维护，便于项目方进行环境数据留存与管理。",
     info: [
-      ["交付规模", "约 100–300 台"],
+      ["交付规模", "200 台"],
       ["监测内容", "扬尘、噪声、温湿度"],
       ["交付内容", "现场设备、联网配置、后台查看与维护支持"],
     ],
   },
   {
+    visual: "fiber",
     label: "分布式光纤监测",
     title: "风电与结构安全分布式光纤监测协作项目",
     desc: "围绕风电叶片、桥梁、边坡等结构监测场景，参与分布式光纤设备配套、数据采集和方案协作。项目可根据现场布点需求，结合光纤传感数据、温度、应变和振动变化，实现关键位置的连续监测与预警展示。",
@@ -110,9 +114,9 @@ const cases = [
   },
 ];
 
-function SectionTitle({ eyebrow, title, desc }) {
+function SectionTitle({ eyebrow, title, desc, className = "mb-12" }) {
   return (
-    <div className="mx-auto mb-12 max-w-4xl text-center">
+    <div className={`mx-auto max-w-4xl text-center ${className}`}>
       <div className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">{eyebrow}</div>
       <h2 className="text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl">{title}</h2>
       {desc && <p className="mt-5 text-base leading-8 text-slate-600 md:text-lg">{desc}</p>}
@@ -137,6 +141,110 @@ function HeroSky() {
       </div>
       <div className="absolute bottom-20 right-[18%] h-24 w-24 border-l-[5px] border-t-[5px] border-sky-900/60 rotate-45" />
       <div className="absolute bottom-20 right-[8%] h-28 w-28 border-l-[5px] border-t-[5px] border-sky-900/60 rotate-45" />
+    </div>
+  );
+}
+
+function CompanyVisual() {
+  return (
+    <div className="relative min-h-[360px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-8 shadow-sm">
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute left-0 top-12 h-px w-full bg-sky-100" />
+        <div className="absolute left-0 top-28 h-px w-full bg-sky-100" />
+        <div className="absolute left-0 top-44 h-px w-full bg-sky-100" />
+        <div className="absolute left-12 top-0 h-full w-px bg-sky-100" />
+        <div className="absolute left-36 top-0 h-full w-px bg-sky-100" />
+        <div className="absolute right-24 top-0 h-full w-px bg-sky-100" />
+      </div>
+
+      <div className="relative z-10 flex h-full min-h-[300px] flex-col justify-between">
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700">Project Delivery</div>
+            <div className="mt-4 h-1 w-20 bg-sky-700" />
+          </div>
+          <div className="rounded border border-sky-200 bg-white/70 px-4 py-2 text-sm font-medium text-sky-800">
+            Device · Data · Platform
+          </div>
+        </div>
+
+        <div className="relative mt-8 flex flex-1 items-center justify-center">
+          <div className="absolute left-0 top-1/2 h-px w-full bg-sky-300" />
+          <div className="absolute left-[18%] top-[38%] h-px w-[64%] -rotate-6 bg-sky-400/70" />
+          <div className="absolute left-[18%] top-[62%] h-px w-[64%] rotate-6 bg-sky-400/70" />
+          <div className="relative h-40 w-52 rounded border border-sky-300 bg-white/85 shadow-sm">
+            <div className="absolute left-5 right-5 top-5 h-3 rounded bg-sky-100" />
+            <div className="absolute left-5 top-12 h-16 w-16 rounded border border-sky-200 bg-sky-50" />
+            <div className="absolute right-5 top-12 space-y-3">
+              <div className="h-2 w-20 rounded bg-sky-200" />
+              <div className="h-2 w-16 rounded bg-sky-200" />
+              <div className="h-2 w-24 rounded bg-sky-200" />
+            </div>
+            <div className="absolute bottom-0 left-1/2 h-10 w-px bg-sky-300" />
+            <div className="absolute -bottom-2 left-[36%] h-2 w-16 rounded-t bg-sky-300" />
+          </div>
+
+          <div className="absolute left-4 top-10 h-5 w-5 rounded-full border-4 border-white bg-sky-600 shadow-sm" />
+          <div className="absolute bottom-12 left-14 h-4 w-4 rounded-full border-4 border-white bg-sky-500 shadow-sm" />
+          <div className="absolute right-10 top-14 h-5 w-5 rounded-full border-4 border-white bg-sky-700 shadow-sm" />
+          <div className="absolute bottom-8 right-20 h-4 w-4 rounded-full border-4 border-white bg-sky-500 shadow-sm" />
+        </div>
+
+        <div className="grid grid-cols-3 gap-3 text-xs font-medium text-sky-900">
+          <div className="border-t border-sky-300 pt-3">监测终端</div>
+          <div className="border-t border-sky-300 pt-3">数据接入</div>
+          <div className="border-t border-sky-300 pt-3">项目交付</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CaseVisual({ variant }) {
+  const isFiber = variant === "fiber";
+
+  return (
+    <div className="relative min-h-[210px] overflow-hidden rounded border border-sky-100 bg-gradient-to-br from-white via-sky-50 to-sky-200 p-5">
+      <div className="absolute inset-0">
+        <div className="absolute left-0 top-10 h-px w-full bg-sky-100" />
+        <div className="absolute left-0 top-24 h-px w-full bg-sky-100" />
+        <div className="absolute left-0 bottom-12 h-px w-full bg-sky-100" />
+        <div className="absolute left-10 top-0 h-full w-px bg-sky-100" />
+        <div className="absolute right-12 top-0 h-full w-px bg-sky-100" />
+      </div>
+
+      <div className="relative z-10 h-full min-h-[170px]">
+        <div className="absolute left-2 top-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+          Field View
+        </div>
+
+        {isFiber ? (
+          <div className="absolute inset-x-4 top-20">
+            <div className="h-px w-full bg-sky-700" />
+            <div className="mt-8 h-px w-full bg-sky-500" />
+            <div className="absolute -top-7 left-[18%] h-14 w-14 rotate-45 border-l-2 border-t-2 border-sky-700" />
+            <div className="absolute -top-9 left-[48%] h-16 w-16 rotate-45 border-l-2 border-t-2 border-sky-600" />
+            <div className="absolute -top-6 right-[8%] h-12 w-12 rotate-45 border-l-2 border-t-2 border-sky-500" />
+          </div>
+        ) : (
+          <div className="absolute left-1/2 top-1/2 h-28 w-24 -translate-x-1/2 -translate-y-1/2 rounded border border-sky-300 bg-white/85 shadow-sm">
+            <div className="mx-auto mt-4 h-10 w-10 rounded-full border border-sky-300 bg-sky-50" />
+            <div className="mx-auto mt-4 h-2 w-14 rounded bg-sky-200" />
+            <div className="mx-auto mt-2 h-2 w-10 rounded bg-sky-200" />
+          </div>
+        )}
+
+        <div className="absolute bottom-5 left-4 right-4 flex items-end justify-between">
+          <div className="h-10 w-8 border border-sky-300 bg-white/70" />
+          <div className="h-16 w-8 border border-sky-300 bg-white/70" />
+          <div className="h-8 w-8 border border-sky-300 bg-white/70" />
+          <div className="h-12 w-8 border border-sky-300 bg-white/70" />
+        </div>
+
+        <div className="absolute right-5 top-10 h-3 w-3 rounded-full bg-sky-700" />
+        <div className="absolute left-6 bottom-20 h-2.5 w-2.5 rounded-full bg-sky-500" />
+        <div className="absolute right-16 bottom-24 h-2.5 w-2.5 rounded-full bg-sky-600" />
+      </div>
     </div>
   );
 }
@@ -209,24 +317,25 @@ export default function MingjunTechHomepage() {
         </div>
       </section>
 
-      <section id="关于我们" className="px-5 py-16 md:px-8 md:py-20">
+      <section id="关于我们" className="px-5 py-14 md:px-8 md:py-[4.5rem]">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div>
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+            <div className="max-w-2xl">
               <div className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-sky-700">Company Profile</div>
               <h2 className="text-3xl font-semibold text-slate-950 md:text-4xl">公司简介</h2>
+              <div className="mt-8 space-y-5 text-base leading-9 text-slate-700">
+                <p>
+                  {company} 位于广东东莞，主要面向国内外高校、科研单位、企业客户和工程项目，提供智能设备定制开发、物联网数据平台、传感监测终端、数据采集系统与项目交付服务。
+                </p>
+                <p>
+                  公司服务内容包括需求沟通、方案设计、硬件开发、软件定制、设备生产、数据接入、批量测试、包装出货和后续维护，适用于样机开发、小批量试产和批量项目交付。
+                </p>
+                <p>
+                  团队已参与室内环境与健康研究、空气质量监测、工地环境监测、数据采集终端、分布式光纤监测协作等项目，相关项目服务、设备交付或技术支持曾覆盖新加坡国立大学、剑桥大学、湖南大学等国内外高校及科研单位。
+                </p>
+              </div>
             </div>
-            <div className="space-y-5 text-base leading-9 text-slate-700">
-              <p>
-                {company} 位于广东东莞，主要面向国内外高校、科研单位、企业客户和工程项目，提供智能设备定制开发、物联网数据平台、传感监测终端、数据采集系统与项目交付服务。
-              </p>
-              <p>
-                公司服务内容包括需求沟通、方案设计、硬件开发、软件定制、设备生产、数据接入、批量测试、包装出货和后续维护，适用于样机开发、小批量试产和批量项目交付。
-              </p>
-              <p>
-                团队已参与室内环境与健康研究、空气质量监测、工地环境监测、数据采集终端、分布式光纤监测协作等项目，相关项目服务、设备交付或技术支持曾覆盖新加坡国立大学、剑桥大学、湖南大学等国内外高校及科研单位。
-              </p>
-            </div>
+            <CompanyVisual />
           </div>
         </div>
       </section>
@@ -273,16 +382,17 @@ export default function MingjunTechHomepage() {
         </div>
       </section>
 
-      <section id="项目案例" className="px-5 py-20 md:px-8 md:py-24">
+      <section id="项目案例" className="px-5 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="Cases"
             title="项目案例"
-            desc="以下为官网展示样式稿，项目名称、交付数量和合作主体可在正式上线前按合同与交付记录进一步核准。"
+            desc="围绕环境监测、数据采集与工程监测场景，明钧科技提供设备、平台与项目交付服务。"
+            className="mb-9 md:mb-10"
           />
-          <div className="space-y-8">
+          <div className="space-y-6">
             {cases.map((item, index) => (
-              <article key={item.title} className="grid gap-8 border-t border-slate-200 pt-8 lg:grid-cols-[0.28fr_0.72fr]">
+              <article key={item.title} className="grid gap-6 border-t border-slate-200 py-8 lg:grid-cols-[0.16fr_0.52fr_0.32fr] lg:items-center">
                 <div>
                   <div className="text-sm font-semibold text-sky-700">0{index + 1}</div>
                   <div className="mt-3 text-sm text-slate-500">{item.label}</div>
@@ -299,6 +409,7 @@ export default function MingjunTechHomepage() {
                     ))}
                   </div>
                 </div>
+                <CaseVisual variant={item.visual} />
               </article>
             ))}
           </div>
